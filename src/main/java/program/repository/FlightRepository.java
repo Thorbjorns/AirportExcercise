@@ -12,7 +12,7 @@ import java.util.UUID;
 public class FlightRepository {
     private List<Flight> flightList = new ArrayList<>();
 
-    public void addFlight(UUID planeNumber
+    public Flight addFlight(UUID planeNumber
             , Airstrip startingAirstrip
             , Airstrip landingAirstrip
             , LocalTime startingTime
@@ -25,6 +25,7 @@ public class FlightRepository {
                 ,landingTime
                 ,flightState);
         flightList.add(flight);
+        return flight;
     }
 
     private List<Flight> showAllFlights(){
