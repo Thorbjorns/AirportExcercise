@@ -6,5 +6,4 @@ public class Airstrip {
     private UUID airstripNUmber;
     private String airportName;
     private float airportLenght;
-
 }
