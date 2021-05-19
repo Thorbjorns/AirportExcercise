@@ -12,7 +12,7 @@ import java.util.UUID;
 public class FlightRepository {
     private List<Flight> flightList = new ArrayList<>();
 
-    private void addFlight(UUID planeNumber
+    public void addFlight(UUID planeNumber
             , Airstrip startingAirstrip
             , Airstrip landingAirstrip
             , LocalTime startingTime
@@ -38,5 +38,19 @@ public class FlightRepository {
         flight.setFlightState(flightState);
     }
 
+    private void editFlight(Flight flight
+            ,int index
+            ,Airstrip startingAirstrip
+            ,Airstrip landingAirstrip
+            ,LocalTime startingTime
+            ,LocalTime landingTime
+            ,FlightState flightState){
+        flight.setStartingAirstrip(startingAirstrip);
+        flight.setLandingAirstrip(landingAirstrip);
+        flight.setStartingTime(startingTime);
+        flight.setLandingTime(landingTime);
+        flight.setFlightState(flightState);
+        flightList.set(index,flight);
+    }
 
 }
