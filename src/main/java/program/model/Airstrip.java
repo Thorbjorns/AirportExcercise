@@ -3,16 +3,16 @@ package program.model;
 import java.util.UUID;
 
 public class Airstrip {
-    private UUID airstripNUmber;
+    private UUID airstripNumber;
     private String airportName;
     private int airportLenght;
 
     public UUID getAirstripNUmber() {
-        return airstripNUmber;
+        return airstripNumber;
     }
 
     public void setAirstripNUmber(UUID airstripNUmber) {
-        this.airstripNUmber = airstripNUmber;
+        this.airstripNumber = airstripNUmber;
     }
 
     public String getAirportName() {
@@ -34,7 +34,7 @@ public class Airstrip {
     @Override
     public String toString() {
         return "Airstrip{" +
-                "airstripNUmber=" + airstripNUmber +
+                "airstripNUmber=" + airstripNumber +
                 ", airportName='" + airportName + '\'' +
                 ", airportLenght=" + airportLenght +
                 '}';

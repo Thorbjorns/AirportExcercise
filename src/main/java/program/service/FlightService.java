@@ -10,16 +10,18 @@ import java.util.UUID;
 
 public class FlightService {
 
-    private FlightRepository flightRepository = new FlightRepository();
+    private FlightRepository flightRepository;
 
-
+    public FlightService(FlightRepository flightRepository) {
+        this.flightRepository = flightRepository;
+    }
 
     public Flight addFlight(UUID planeNumber,
-                          Airstrip startingAirtstrip,
-                          Airstrip landingAirstrip,
-                          LocalTime startingTime,
-                          LocalTime landingTime,
-                          FlightState flightState){
+                            Airstrip startingAirtstrip,
+                            Airstrip landingAirstrip,
+                            LocalTime startingTime,
+                            LocalTime landingTime,
+                            FlightState flightState){
       return flightRepository.addFlight(planeNumber
                 ,startingAirtstrip
                 ,landingAirstrip
