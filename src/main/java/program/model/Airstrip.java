@@ -7,6 +7,12 @@ public class Airstrip {
     private String airportName;
     private int airportLenght;
 
+    public Airstrip(UUID airstripNumber, String airportName, int airportLenght) {
+        this.airstripNumber = airstripNumber;
+        this.airportName = airportName;
+        this.airportLenght = airportLenght;
+    }
+
     public UUID getAirstripNUmber() {
         return airstripNumber;
     }
