@@ -72,4 +72,16 @@ public class Flight {
     public void setFlightState(FlightState flightState) {
         this.flightState = flightState;
     }
+
+    @Override
+    public String toString() {
+        return "Flight{" +
+                "planeNumber=" + planeNumber +
+                ", startingAirstrip=" + startingAirstrip +
+                ", landingAirstrip=" + landingAirstrip +
+                ", startingTime=" + startingTime +
+                ", landingTime=" + landingTime +
+                ", flightState=" + flightState +
+                '}';
+    }
 }
