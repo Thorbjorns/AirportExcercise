@@ -28,7 +28,7 @@ public class FlightRepository {
         return flight;
     }
 
-    private List<Flight> showAllFlights(){
+    public List<Flight> showAllFlights(){
         for (Flight flight:flightList) {
             System.out.println(flight);
         }

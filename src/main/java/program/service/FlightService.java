@@ -6,6 +6,7 @@ import program.model.FlightState;
 import program.repository.FlightRepository;
 
 import java.time.LocalTime;
+import java.util.List;
 import java.util.UUID;
 
 public class FlightService {
@@ -29,6 +30,10 @@ public class FlightService {
                 landingTime
                 ,flightState);
 
+    }
+
+    public List<Flight> showAllFlights(){
+        return flightRepository.showAllFlights();
     }
 
 }

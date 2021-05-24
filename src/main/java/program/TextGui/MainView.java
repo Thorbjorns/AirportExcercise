@@ -8,6 +8,7 @@ import program.service.FlightService;
 
 import java.sql.Time;
 import java.time.LocalTime;
+import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
 
@@ -37,6 +38,7 @@ public class MainView {
         Airstrip startingAirstrip = addAirstrip();
         System.out.println("Insert landing airstrip informations");
         Airstrip landingAirstrip = addAirstrip();
+        System.out.println("Inser time of start");
         LocalTime startingTime = LocalTime.of(input.nextInt(), input.nextInt());
         LocalTime landingTime = LocalTime.of(input.nextInt(), input.nextInt());
         System.out.println("Flight state is turned as a planned:");
@@ -49,5 +51,9 @@ public class MainView {
                 startingTime,
                 landingTime,
                 flightState);
+    }
+
+    public List<Flight> showAllFlights(){
+        return flightService.showAllFlights();
     }
 }
