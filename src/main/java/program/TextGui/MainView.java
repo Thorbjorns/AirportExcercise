@@ -33,14 +33,14 @@ public class MainView {
 
     public Flight addFlight(){
         UUID planeNumber = UUID.randomUUID();
+        System.out.println("Insert starting airstrip informations");
         Airstrip startingAirstrip = addAirstrip();
+        System.out.println("Insert landing airstrip informations");
         Airstrip landingAirstrip = addAirstrip();
         LocalTime startingTime = LocalTime.of(input.nextInt(), input.nextInt());
         LocalTime landingTime = LocalTime.of(input.nextInt(), input.nextInt());
-        System.out.println("Choose from list of flight states: ");
-        System.out.println("PLANNED,READY,IN_TRAVEL,FINISHED,CANCELLED");
+        System.out.println("Flight state is turned as a planned:");
         FlightState flightState = FlightState.PLANNED;
-        System.out.println("Choose starting airstrip");
 
 
         return flightService.addFlight(planeNumber,
